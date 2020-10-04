@@ -23,6 +23,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewModel()
+        
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
 
@@ -47,16 +49,17 @@ class RegisterViewController: UIViewController {
         if trainerName == "" {
             alert(message: "You need to set a Name!")
         } else {
-            performSegue(withIdentifier: SEGUE_REGISTER2_ID, sender: trainerName)
+            viewModel.goToPokemonTypeScreen(trainerName: trainerName)
         }
         
     }
     
-    
 }
 
 extension RegisterViewController: RegisterViewModelDelegate {
-    
+    func goToPokemonTypeScreen(trainerName: String) {
+        performSegue(withIdentifier: SEGUE_REGISTER2_ID, sender: trainerName)
+    }
 }
 
 // MARK: - Navigation

@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="331.8840579710145" y="136.60714285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokemon Type View Controller-->
         <scene sceneID="1Kc-ib-Noe">
             <objects>
-                <viewController id="CCn-Xh-Pyn" sceneMemberID="viewController">
+                <viewController id="CCn-Xh-Pyn" customClass="PokemonTypeViewController" customModule="VortigoTestePratico" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fbp-j8-8J8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Irq-QT-dno">
                                 <rect key="frame" x="41.5" y="428" width="331" height="40"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="oza-YD-tl2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oza-YD-tl2">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="37"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoo-xr-HZP">
@@ -206,6 +206,10 @@
                     <navigationItem key="navigationItem" id="k42-yf-OB4">
                         <barButtonItem key="backBarButtonItem" title="  " id="22i-TN-Iqt"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chosePokemonTypeView" destination="Irq-QT-dno" id="6cd-Vz-fzr"/>
+                        <outlet property="trainerNameLabel" destination="BA5-YQ-KxD" id="6Yn-0j-fuW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHm-mA-cfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
