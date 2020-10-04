@@ -19,6 +19,8 @@
 		7D8CE15E252A558A004D12A2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE15D252A558A004D12A2 /* MainViewModel.swift */; };
 		7D8CE16A252A5EE0004D12A2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE169252A5EE0004D12A2 /* UIViewController+Extensions.swift */; };
 		7D8CE16E252A5F5B004D12A2 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE16D252A5F5B004D12A2 /* UIWindow+Extensions.swift */; };
+		7D8CE172252A7417004D12A2 /* PokemonTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE171252A7417004D12A2 /* PokemonTypeViewController.swift */; };
+		7D8CE176252A7469004D12A2 /* PokemonTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE175252A7469004D12A2 /* PokemonTypeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		7D8CE15D252A558A004D12A2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7D8CE169252A5EE0004D12A2 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		7D8CE16D252A5F5B004D12A2 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		7D8CE171252A7417004D12A2 /* PokemonTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeViewController.swift; sourceTree = "<group>"; };
+		7D8CE175252A7469004D12A2 /* PokemonTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 		7D8CE150252A4A7B004D12A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D8CE171252A7417004D12A2 /* PokemonTypeViewController.swift */,
 				7D8CE152252A54CF004D12A2 /* RegisterViewController.swift */,
 				7D8CE156252A54DC004D12A2 /* Register.storyboard */,
 			);
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8CE159252A552F004D12A2 /* RegisterViewModel.swift */,
+				7D8CE175252A7469004D12A2 /* PokemonTypeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8CE176252A7469004D12A2 /* PokemonTypeViewModel.swift in Sources */,
 				7D8CE138252A3BC4004D12A2 /* MainViewController.swift in Sources */,
 				7D8CE15A252A552F004D12A2 /* RegisterViewModel.swift in Sources */,
 				7D8CE134252A3BC3004D12A2 /* AppDelegate.swift in Sources */,
@@ -235,6 +242,7 @@
 				7D8CE136252A3BC3004D12A2 /* SceneDelegate.swift in Sources */,
 				7D8CE16E252A5F5B004D12A2 /* UIWindow+Extensions.swift in Sources */,
 				7D8CE153252A54CF004D12A2 /* RegisterViewController.swift in Sources */,
+				7D8CE172252A7417004D12A2 /* PokemonTypeViewController.swift in Sources */,
 				7D8CE15E252A558A004D12A2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

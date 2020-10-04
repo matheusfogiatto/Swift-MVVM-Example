@@ -9,15 +9,26 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    // MARK: - Outlets
+    @IBOutlet weak var userNameTextField: UITextField!
+    
     // MARK: - Attributes
     let viewModel = RegisterViewModel()
+    
+    // MARK: - Constants
+    private let SEGUE_REGISTER2_ID = "goToNextRegister"
     
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+
+        view.addGestureRecognizer(tap)
+        
+        userNameTextField.delegate = self
     }
     
     // MARK: - Configuration
@@ -25,8 +36,46 @@ class RegisterViewController: UIViewController {
         viewModel.delegate = self
     }
     
+    // MARK: - Outlet Methods
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        guard let trainerName = userNameTextField.text else { return }
+        
+        if trainerName == "" {
+            alert(message: "You need to set a Name!")
+        } else {
+            performSegue(withIdentifier: SEGUE_REGISTER2_ID, sender: trainerName)
+        }
+        
+    }
+    
+    
 }
 
 extension RegisterViewController: RegisterViewModelDelegate {
     
+}
+
+// MARK: - Navigation
+extension RegisterViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let pokemonTypeViewController = segue.destination as? PokemonTypeViewController else { return }
+        let trainerName = sender as? String
+        pokemonTypeViewController.viewModel.trainerName = trainerName ?? ""
+        
+    }
+    
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }
