@@ -179,6 +179,7 @@
                                 <rect key="frame" x="174" y="776" width="66" height="66"/>
                                 <state key="normal" image="nextButton"/>
                                 <connections>
+                                    <action selector="nextButtonTapped:" destination="CCn-Xh-Pyn" eventType="touchUpInside" id="ND8-8s-haQ"/>
                                     <action selector="nextButtonTapped:" destination="Uo2-NJ-Gvp" eventType="touchUpInside" id="aiB-eD-196"/>
                                 </connections>
                             </button>

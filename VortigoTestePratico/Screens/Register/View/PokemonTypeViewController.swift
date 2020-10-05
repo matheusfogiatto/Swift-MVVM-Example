@@ -40,9 +40,25 @@ class PokemonTypeViewController: UIViewController {
     @objc func updateLabel() {
         pokemonTypeLabel.text = UserDefaultsAccess.getPokemonTypeName()
     }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        guard let typeName = pokemonTypeLabel.text else { return }
+        
+        if typeName == "" {
+            alert(message: "You need to set a favorite Pokemon Type!")
+        } else {
+            UserDefaultsAccess.updateTrainerName(name: viewModel.trainerName)
+            viewModel.goToHomeScreen()
+        }
+    }
+    
 }
 
 extension PokemonTypeViewController: PokemonTypeViewModelDelegate {
+    func goToHomeScreen() {
+        goToStoryboard(storyboardReference: "Home")
+    }
+    
     func presentPokemonTypeChoice() {
         presentModallyViewController(storyboardReference: "PokemonTypeChoice", atViewController: "PokemonTypeChoice")
     }

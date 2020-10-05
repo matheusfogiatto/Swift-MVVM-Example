@@ -9,6 +9,7 @@ import Foundation
 
 protocol PokemonTypeViewModelDelegate: class {
     func presentPokemonTypeChoice()
+    func goToHomeScreen()
 }
 
 class PokemonTypeViewModel {
@@ -19,6 +20,10 @@ class PokemonTypeViewModel {
     
     func didTapTypeChoice() {
         delegate?.presentPokemonTypeChoice()
+    }
+    
+    func goToHomeScreen() {
+        delegate?.goToHomeScreen()
     }
     
 }
