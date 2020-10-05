@@ -7,4 +7,6 @@ target 'VortigoTestePratico' do
 
   # Pods for VortigoTestePratico
 
+  pod 'Moya', '~> 14.0'
+
 end

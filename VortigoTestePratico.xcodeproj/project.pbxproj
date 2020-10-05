@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,20 @@
 		7D8CE16E252A5F5B004D12A2 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE16D252A5F5B004D12A2 /* UIWindow+Extensions.swift */; };
 		7D8CE172252A7417004D12A2 /* PokemonTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE171252A7417004D12A2 /* PokemonTypeViewController.swift */; };
 		7D8CE176252A7469004D12A2 /* PokemonTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE175252A7469004D12A2 /* PokemonTypeViewModel.swift */; };
+		7D8CE181252A9231004D12A2 /* TargetType+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE180252A9231004D12A2 /* TargetType+default.swift */; };
+		7D8CE184252A9245004D12A2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE183252A9245004D12A2 /* Service.swift */; };
+		7D8CE187252A9281004D12A2 /* Result+decoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE186252A9281004D12A2 /* Result+decoded.swift */; };
+		7D8CE18A252A9291004D12A2 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE189252A9291004D12A2 /* ApiError.swift */; };
+		7D8CE18D252A92B2004D12A2 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE18C252A92B2004D12A2 /* JSONDecoder+Extensions.swift */; };
+		7D8CE190252A92C4004D12A2 /* JSONEncoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE18F252A92C4004D12A2 /* JSONEncoder+Extensions.swift */; };
+		7D8CE193252A9355004D12A2 /* PokemonVortigoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE192252A9355004D12A2 /* PokemonVortigoApi.swift */; };
+		7D8CE19D252A9716004D12A2 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE19C252A9716004D12A2 /* PokemonType.swift */; };
+		7D8CE1A2252A99D3004D12A2 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE1A1252A99D3004D12A2 /* DateFormatter+Extensions.swift */; };
+		CDFFBBDE672D655C50157366 /* Pods_VortigoTestePratico.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBE684691259AA475191AC6 /* Pods_VortigoTestePratico.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FBE684691259AA475191AC6 /* Pods_VortigoTestePratico.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VortigoTestePratico.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8CE130252A3BC3004D12A2 /* VortigoTestePratico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VortigoTestePratico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8CE133252A3BC3004D12A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D8CE135252A3BC3004D12A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +51,17 @@
 		7D8CE16D252A5F5B004D12A2 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
 		7D8CE171252A7417004D12A2 /* PokemonTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeViewController.swift; sourceTree = "<group>"; };
 		7D8CE175252A7469004D12A2 /* PokemonTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeViewModel.swift; sourceTree = "<group>"; };
+		7D8CE180252A9231004D12A2 /* TargetType+default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType+default.swift"; sourceTree = "<group>"; };
+		7D8CE183252A9245004D12A2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7D8CE186252A9281004D12A2 /* Result+decoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+decoded.swift"; sourceTree = "<group>"; };
+		7D8CE189252A9291004D12A2 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		7D8CE18C252A92B2004D12A2 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		7D8CE18F252A92C4004D12A2 /* JSONEncoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Extensions.swift"; sourceTree = "<group>"; };
+		7D8CE192252A9355004D12A2 /* PokemonVortigoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonVortigoApi.swift; sourceTree = "<group>"; };
+		7D8CE19C252A9716004D12A2 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
+		7D8CE1A1252A99D3004D12A2 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		EFD8E8B5CDF7BB4DB3416407 /* Pods-VortigoTestePratico.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VortigoTestePratico.debug.xcconfig"; path = "Target Support Files/Pods-VortigoTestePratico/Pods-VortigoTestePratico.debug.xcconfig"; sourceTree = "<group>"; };
+		F3B37849E6BC2457969468DE /* Pods-VortigoTestePratico.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VortigoTestePratico.release.xcconfig"; path = "Target Support Files/Pods-VortigoTestePratico/Pods-VortigoTestePratico.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +69,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFFBBDE672D655C50157366 /* Pods_VortigoTestePratico.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C756519B1B43244476C768D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFD8E8B5CDF7BB4DB3416407 /* Pods-VortigoTestePratico.debug.xcconfig */,
+				F3B37849E6BC2457969468DE /* Pods-VortigoTestePratico.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3A5B3E4201DD5580AFAE34DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FBE684691259AA475191AC6 /* Pods_VortigoTestePratico.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D8CE127252A3BC3004D12A2 = {
 			isa = PBXGroup;
 			children = (
 				7D8CE132252A3BC3004D12A2 /* VortigoTestePratico */,
 				7D8CE131252A3BC3004D12A2 /* Products */,
+				1C756519B1B43244476C768D /* Pods */,
+				3A5B3E4201DD5580AFAE34DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,9 +114,11 @@
 		7D8CE132252A3BC3004D12A2 /* VortigoTestePratico */ = {
 			isa = PBXGroup;
 			children = (
+				7D8CE17D252A920E004D12A2 /* Networking */,
 				7D8CE168252A5ED3004D12A2 /* Extensions */,
 				7D8CE14B252A4A0B004D12A2 /* Screens */,
 				7D8CE149252A3BEB004D12A2 /* App */,
+				7D8CE19B252A9703004D12A2 /* Models */,
 				7D8CE13C252A3BC6004D12A2 /* Assets.xcassets */,
 			);
 			path = VortigoTestePratico;
@@ -163,6 +207,45 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7D8CE17D252A920E004D12A2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE192252A9355004D12A2 /* PokemonVortigoApi.swift */,
+				7D8CE17F252A921C004D12A2 /* Coders */,
+				7D8CE17E252A9217004D12A2 /* Moya */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7D8CE17E252A9217004D12A2 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE180252A9231004D12A2 /* TargetType+default.swift */,
+				7D8CE183252A9245004D12A2 /* Service.swift */,
+				7D8CE186252A9281004D12A2 /* Result+decoded.swift */,
+				7D8CE189252A9291004D12A2 /* ApiError.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		7D8CE17F252A921C004D12A2 /* Coders */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE18C252A92B2004D12A2 /* JSONDecoder+Extensions.swift */,
+				7D8CE1A1252A99D3004D12A2 /* DateFormatter+Extensions.swift */,
+				7D8CE18F252A92C4004D12A2 /* JSONEncoder+Extensions.swift */,
+			);
+			path = Coders;
+			sourceTree = "<group>";
+		};
+		7D8CE19B252A9703004D12A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE19C252A9716004D12A2 /* PokemonType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D8CE144252A3BC6004D12A2 /* Build configuration list for PBXNativeTarget "VortigoTestePratico" */;
 			buildPhases = (
+				A62FEE63606EFA15B86182B6 /* [CP] Check Pods Manifest.lock */,
 				7D8CE12C252A3BC3004D12A2 /* Sources */,
 				7D8CE12D252A3BC3004D12A2 /* Frameworks */,
 				7D8CE12E252A3BC3004D12A2 /* Resources */,
+				CB5CB6F2C94771662F6A6BB6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,20 +314,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A62FEE63606EFA15B86182B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VortigoTestePratico-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB5CB6F2C94771662F6A6BB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VortigoTestePratico/Pods-VortigoTestePratico-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VortigoTestePratico/Pods-VortigoTestePratico-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VortigoTestePratico/Pods-VortigoTestePratico-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D8CE12C252A3BC3004D12A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7D8CE176252A7469004D12A2 /* PokemonTypeViewModel.swift in Sources */,
+				7D8CE1A2252A99D3004D12A2 /* DateFormatter+Extensions.swift in Sources */,
+				7D8CE18D252A92B2004D12A2 /* JSONDecoder+Extensions.swift in Sources */,
 				7D8CE138252A3BC4004D12A2 /* MainViewController.swift in Sources */,
+				7D8CE193252A9355004D12A2 /* PokemonVortigoApi.swift in Sources */,
 				7D8CE15A252A552F004D12A2 /* RegisterViewModel.swift in Sources */,
 				7D8CE134252A3BC3004D12A2 /* AppDelegate.swift in Sources */,
+				7D8CE19D252A9716004D12A2 /* PokemonType.swift in Sources */,
 				7D8CE16A252A5EE0004D12A2 /* UIViewController+Extensions.swift in Sources */,
+				7D8CE187252A9281004D12A2 /* Result+decoded.swift in Sources */,
+				7D8CE184252A9245004D12A2 /* Service.swift in Sources */,
+				7D8CE18A252A9291004D12A2 /* ApiError.swift in Sources */,
 				7D8CE136252A3BC3004D12A2 /* SceneDelegate.swift in Sources */,
 				7D8CE16E252A5F5B004D12A2 /* UIWindow+Extensions.swift in Sources */,
 				7D8CE153252A54CF004D12A2 /* RegisterViewController.swift in Sources */,
+				7D8CE190252A92C4004D12A2 /* JSONEncoder+Extensions.swift in Sources */,
 				7D8CE172252A7417004D12A2 /* PokemonTypeViewController.swift in Sources */,
+				7D8CE181252A9231004D12A2 /* TargetType+default.swift in Sources */,
 				7D8CE15E252A558A004D12A2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +523,7 @@
 		};
 		7D8CE145252A3BC6004D12A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFD8E8B5CDF7BB4DB3416407 /* Pods-VortigoTestePratico.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -406,6 +543,7 @@
 		};
 		7D8CE146252A3BC6004D12A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B37849E6BC2457969468DE /* Pods-VortigoTestePratico.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

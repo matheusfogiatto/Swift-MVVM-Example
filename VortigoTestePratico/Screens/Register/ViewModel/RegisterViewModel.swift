@@ -15,9 +15,8 @@ class RegisterViewModel {
     
     // MARK: - Attributes
     weak var delegate: RegisterViewModelDelegate?
-    
+ 
     func goToPokemonTypeScreen(trainerName: String) {
         delegate?.goToPokemonTypeScreen(trainerName: trainerName)
     }
-    
 }
