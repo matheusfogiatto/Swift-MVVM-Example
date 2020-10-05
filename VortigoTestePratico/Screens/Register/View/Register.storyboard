@@ -208,6 +208,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chosePokemonTypeView" destination="Irq-QT-dno" id="6cd-Vz-fzr"/>
+                        <outlet property="pokemonTypeLabel" destination="hoo-xr-HZP" id="nhh-iM-CNv"/>
                         <outlet property="trainerNameLabel" destination="BA5-YQ-KxD" id="6Yn-0j-fuW"/>
                     </connections>
                 </viewController>

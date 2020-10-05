@@ -12,10 +12,11 @@ class PokemonTypeViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var trainerNameLabel: UILabel!
     @IBOutlet weak var chosePokemonTypeView: UIStackView!
+    @IBOutlet weak var pokemonTypeLabel: UILabel!
     
     // MARK: - Attributes
     let viewModel = PokemonTypeViewModel()
-
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +27,18 @@ class PokemonTypeViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.didTapTypeChoice (_:)))
         chosePokemonTypeView.addGestureRecognizer(tapGesture)
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateLabel), name: NSNotification.Name(rawValue: "DoUpdateLabel"), object: nil)
+        
     }
     
     // MARK: - Outlet Methods
     @objc func didTapTypeChoice(_ sender:UITapGestureRecognizer){
         viewModel.didTapTypeChoice()
+    }
+    
+    @objc func updateLabel() {
+        pokemonTypeLabel.text = UserDefaultsAccess.getPokemonTypeName()
     }
 }
 

@@ -64,7 +64,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-RL-8Tj">
-                                                    <rect key="frame" x="60" y="40" width="41.5" height="20.5"/>
+                                                    <rect key="frame" x="80" y="40" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                                             <constraints>
                                                 <constraint firstItem="O4r-RL-8Tj" firstAttribute="centerY" secondItem="Sz6-Si-a4h" secondAttribute="centerY" id="7Tu-p1-jak"/>
                                                 <constraint firstAttribute="trailing" secondItem="Kjf-i6-mfZ" secondAttribute="trailing" id="9iO-4F-OVP"/>
-                                                <constraint firstItem="O4r-RL-8Tj" firstAttribute="leading" secondItem="txS-oJ-ZwO" secondAttribute="trailing" constant="10" id="Fax-zz-uOE"/>
+                                                <constraint firstItem="O4r-RL-8Tj" firstAttribute="leading" secondItem="txS-oJ-ZwO" secondAttribute="trailing" constant="30" id="Fax-zz-uOE"/>
                                                 <constraint firstItem="txS-oJ-ZwO" firstAttribute="centerY" secondItem="Sz6-Si-a4h" secondAttribute="centerY" id="Sw7-cL-OHP"/>
                                                 <constraint firstItem="Kjf-i6-mfZ" firstAttribute="centerY" secondItem="Sz6-Si-a4h" secondAttribute="centerY" id="bB2-Zz-GL4"/>
                                                 <constraint firstItem="txS-oJ-ZwO" firstAttribute="leading" secondItem="Sz6-Si-a4h" secondAttribute="leading" id="nnZ-Op-HZ6"/>

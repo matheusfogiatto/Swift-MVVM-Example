@@ -13,9 +13,9 @@ class PokemonTypeChoiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    
     // MARK: - Attributes
     let viewModel = PokemonTypeChoiceViewModel()
+    var pokemonTypeSelected = ""
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -31,17 +31,26 @@ class PokemonTypeChoiceViewController: UIViewController {
     
     // MARK: - Outlets Methods
     @IBAction func closeButtonTapped(_ sender: UIButton) {
-        // dismiss
+        viewModel.dissmissWithoutSave()
     }
     
     @IBAction func confirmButtonTapped(_ sender: UIButton) {
-        // save
-        // dismiss
+        viewModel.savePokemonType()
     }
     
 }
 
 extension PokemonTypeChoiceViewController: PokemonTypeChoiceViewModelDelegate {
+    func savePokemonType() {
+        UserDefaultsAccess.updatePokemonTypeName(name: pokemonTypeSelected.lowercased())
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DoUpdateLabel"), object: nil, userInfo: nil)
+        dissmissScreen()
+    }
+    
+    func dissmissScreen() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func didLoadPokemonTypes() {
         tableView.reloadData()
     }
@@ -64,6 +73,21 @@ extension PokemonTypeChoiceViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let cell = tableView.cellForRow(at: indexPath) as? PokemonTypeTableViewCell else { return }
+        
+        pokemonTypeSelected = cell.typeNameLabel.text ?? ""
+        
+        cell.isSelected = true
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? PokemonTypeTableViewCell else { return }
+        
+        cell.isSelected = false
     }
     
 }

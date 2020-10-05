@@ -9,6 +9,8 @@ import Foundation
 
 protocol PokemonTypeChoiceViewModelDelegate: class {
     func didLoadPokemonTypes()
+    func dissmissScreen()
+    func savePokemonType()
 }
 
 class PokemonTypeChoiceViewModel {
@@ -34,6 +36,14 @@ class PokemonTypeChoiceViewModel {
                 self.delegate?.didLoadPokemonTypes()
             }
         }
+    }
+    
+    func dissmissWithoutSave() {
+        self.delegate?.dissmissScreen()
+    }
+    
+    func savePokemonType() {
+        self.delegate?.savePokemonType()
     }
     
 }

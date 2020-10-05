@@ -23,13 +23,20 @@ class PokemonTypeTableViewCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
+        self.selectionStyle = .none
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            super.isSelected = isSelected
+            self.typeSelectImage.image = isSelected ? UIImage(named: "radioOn") : UIImage(named: "radioOff")
+        }
     }
     
     func configure(with pokemonType: PokemonType) {
-        typeNameLabel.text = pokemonType.name
+        isSelected = false
+        typeNameLabel.text = pokemonType.name.capitalizingFirstLetter()
         typeImageView.setImage(from: pokemonType.thumbnailImage, withActivityIndicator: false, withFade: true, fadeDuration: .Normal)
     }
     
