@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - Attributes
     let viewModel = HomeViewModel()
@@ -33,7 +33,11 @@ class HomeViewController: UIViewController {
         
         viewModel.fetchPokemonTypes()
         viewModel.fetchAllPokemons()
+        
+        searchBar.delegate = self
+        searchBar.searchTextField.delegate = self
     }
+    
     
     // MARK: - Configuration
     private func setupViewModel() {
@@ -76,6 +80,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 70
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        view.endEditing(true)
+    }
+    
     
 }
 
@@ -95,6 +103,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        view.endEditing(true)
         
         guard let cell = collectionView.cellForItem(at: indexPath) as? PokemonTypeCollectionViewCell else { return }
         
@@ -103,4 +112,43 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         viewModel.reloadFilterTablewView()
     }
     
+}
+
+// MARK: - UISearchBarDelegate
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        
+        viewModel.cancelSearch()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText.isEmpty {
+            viewModel.cancelSearch()
+        }
+        else {
+            viewModel.applySearch(withFilter: searchText)
+        }
+    }
+}
+
+
+// MARK: - UITextFieldDelegate
+extension HomeViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
 }

@@ -19,7 +19,24 @@ class HomeViewModel {
     weak var delegate: HomeViewModelDelegate?
     private let service = Service<PokemonVortigoApi>()
     var pokemonTypes: [PokemonType] = []
-    var pokemonList: [Pokemon] = []
+    var allPokemons: [Pokemon] = []
+    
+    var filter: String?
+    var showldDisplaySearch: Bool = false
+    
+    // MARK: - Computed Attributes
+    var pokemonList: [Pokemon] {
+        
+        if showldDisplaySearch {
+            
+            guard let filter = filter else { return [] }
+            return allPokemons.filter({ $0.name.containsIgnoringCase(filter) })
+        }
+        else {
+            
+            return allPokemons
+        }
+    }
     
     // MARK: - Public Methods
     public func fetchPokemonTypes() {
@@ -48,7 +65,7 @@ class HomeViewModel {
                 print(error.localizedDescription)
                 
             case.success(let result):
-                self.pokemonList = result
+                self.allPokemons = result
                 self.delegate?.didLoadPokemonList()
             }
         }
@@ -60,6 +77,18 @@ class HomeViewModel {
     
     public func reloadFilterTablewView() {
         delegate?.reloadFilterTablewView()
+    }
+    
+    public func applySearch(withFilter filter: String) {
+        self.filter = filter
+        showldDisplaySearch = true
+        delegate?.didLoadPokemonList()
+    }
+    
+    public func cancelSearch() {
+        filter = nil
+        showldDisplaySearch = false
+        delegate?.didLoadPokemonList()
     }
     
 }

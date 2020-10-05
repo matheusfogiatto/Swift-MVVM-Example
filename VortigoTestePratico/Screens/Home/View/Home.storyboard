@@ -140,6 +140,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="wtV-SH-haD" id="dlz-B5-x4F"/>
+                        <outlet property="searchBar" destination="jBy-v8-qct" id="8tB-6F-ipF"/>
                         <outlet property="tableView" destination="kLR-Es-9UH" id="0xc-Ra-5NC"/>
                     </connections>
                 </viewController>
