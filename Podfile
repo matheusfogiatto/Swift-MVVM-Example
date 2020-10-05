@@ -8,5 +8,6 @@ target 'VortigoTestePratico' do
   # Pods for VortigoTestePratico
 
   pod 'Moya', '~> 14.0'
+  pod 'Kingfisher', '~> 5.0'
 
 end

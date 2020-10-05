@@ -30,6 +30,7 @@ class PokemonTypeTableViewCell: UITableViewCell {
     
     func configure(with pokemonType: PokemonType) {
         typeNameLabel.text = pokemonType.name
+        typeImageView.setImage(from: pokemonType.thumbnailImage, withActivityIndicator: false, withFade: true, fadeDuration: .Normal)
     }
     
 }
