@@ -23,10 +23,21 @@ class PokemonTypeViewController: UIViewController {
         viewModel.delegate = self
         
         trainerNameLabel.text = "Hello, \(viewModel.trainerName)!"
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.didTapTypeChoice (_:)))
+        chosePokemonTypeView.addGestureRecognizer(tapGesture)
 
+    }
+    
+    // MARK: - Outlet Methods
+    @objc func didTapTypeChoice(_ sender:UITapGestureRecognizer){
+        viewModel.didTapTypeChoice()
     }
 }
 
 extension PokemonTypeViewController: PokemonTypeViewModelDelegate {
+    func presentPokemonTypeChoice() {
+        presentModallyViewController(storyboardReference: "PokemonTypeChoice", atViewController: "PokemonTypeChoice")
+    }
     
 }

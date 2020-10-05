@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct PokemonResults<T: Decodable>: Decodable {
-    let results: [T]
-}
-
 struct PokemonType: Decodable {
     
     let thumbnailImage: String

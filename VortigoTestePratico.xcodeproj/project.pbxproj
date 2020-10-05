@@ -30,6 +30,11 @@
 		7D8CE193252A9355004D12A2 /* PokemonVortigoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE192252A9355004D12A2 /* PokemonVortigoApi.swift */; };
 		7D8CE19D252A9716004D12A2 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE19C252A9716004D12A2 /* PokemonType.swift */; };
 		7D8CE1A2252A99D3004D12A2 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE1A1252A99D3004D12A2 /* DateFormatter+Extensions.swift */; };
+		7D8CE1C3252AABA9004D12A2 /* PokemonResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE1C2252AABA9004D12A2 /* PokemonResults.swift */; };
+		7D8CE1C9252AAC2E004D12A2 /* PokemonTypeChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE1C8252AAC2E004D12A2 /* PokemonTypeChoiceViewController.swift */; };
+		7D8CE1CD252AAC3A004D12A2 /* PokemonTypeChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE1CC252AAC3A004D12A2 /* PokemonTypeChoiceViewModel.swift */; };
+		7D8CE1D0252AACE4004D12A2 /* PokemonTypeChoice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8CE1CF252AACE3004D12A2 /* PokemonTypeChoice.storyboard */; };
+		7D8CE1D4252AC060004D12A2 /* PokemonTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8CE1D3252AC060004D12A2 /* PokemonTypeTableViewCell.swift */; };
 		CDFFBBDE672D655C50157366 /* Pods_VortigoTestePratico.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBE684691259AA475191AC6 /* Pods_VortigoTestePratico.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 		7D8CE192252A9355004D12A2 /* PokemonVortigoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonVortigoApi.swift; sourceTree = "<group>"; };
 		7D8CE19C252A9716004D12A2 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 		7D8CE1A1252A99D3004D12A2 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		7D8CE1C2252AABA9004D12A2 /* PokemonResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonResults.swift; sourceTree = "<group>"; };
+		7D8CE1C8252AAC2E004D12A2 /* PokemonTypeChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeChoiceViewController.swift; sourceTree = "<group>"; };
+		7D8CE1CC252AAC3A004D12A2 /* PokemonTypeChoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeChoiceViewModel.swift; sourceTree = "<group>"; };
+		7D8CE1CF252AACE3004D12A2 /* PokemonTypeChoice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PokemonTypeChoice.storyboard; sourceTree = "<group>"; };
+		7D8CE1D3252AC060004D12A2 /* PokemonTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeTableViewCell.swift; sourceTree = "<group>"; };
 		EFD8E8B5CDF7BB4DB3416407 /* Pods-VortigoTestePratico.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VortigoTestePratico.debug.xcconfig"; path = "Target Support Files/Pods-VortigoTestePratico/Pods-VortigoTestePratico.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B37849E6BC2457969468DE /* Pods-VortigoTestePratico.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VortigoTestePratico.release.xcconfig"; path = "Target Support Files/Pods-VortigoTestePratico/Pods-VortigoTestePratico.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +148,7 @@
 		7D8CE14B252A4A0B004D12A2 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7D8CE1C5252AABBA004D12A2 /* PokemonTypeChoice */,
 				7D8CE14F252A4A5A004D12A2 /* Register */,
 				7D8CE14C252A4A13004D12A2 /* Main */,
 			);
@@ -242,8 +253,44 @@
 			isa = PBXGroup;
 			children = (
 				7D8CE19C252A9716004D12A2 /* PokemonType.swift */,
+				7D8CE1C2252AABA9004D12A2 /* PokemonResults.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7D8CE1C5252AABBA004D12A2 /* PokemonTypeChoice */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE1C7252AABFE004D12A2 /* ViewModel */,
+				7D8CE1C6252AABF9004D12A2 /* View */,
+			);
+			path = PokemonTypeChoice;
+			sourceTree = "<group>";
+		};
+		7D8CE1C6252AABF9004D12A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE1D2252AC03A004D12A2 /* SubView */,
+				7D8CE1C8252AAC2E004D12A2 /* PokemonTypeChoiceViewController.swift */,
+				7D8CE1CF252AACE3004D12A2 /* PokemonTypeChoice.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D8CE1C7252AABFE004D12A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE1CC252AAC3A004D12A2 /* PokemonTypeChoiceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D8CE1D2252AC03A004D12A2 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				7D8CE1D3252AC060004D12A2 /* PokemonTypeTableViewCell.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +356,7 @@
 				7D8CE13D252A3BC6004D12A2 /* Assets.xcassets in Resources */,
 				7D8CE13B252A3BC4004D12A2 /* Main.storyboard in Resources */,
 				7D8CE157252A54DC004D12A2 /* Register.storyboard in Resources */,
+				7D8CE1D0252AACE4004D12A2 /* PokemonTypeChoice.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,14 +411,18 @@
 			files = (
 				7D8CE176252A7469004D12A2 /* PokemonTypeViewModel.swift in Sources */,
 				7D8CE1A2252A99D3004D12A2 /* DateFormatter+Extensions.swift in Sources */,
+				7D8CE1C9252AAC2E004D12A2 /* PokemonTypeChoiceViewController.swift in Sources */,
 				7D8CE18D252A92B2004D12A2 /* JSONDecoder+Extensions.swift in Sources */,
 				7D8CE138252A3BC4004D12A2 /* MainViewController.swift in Sources */,
+				7D8CE1D4252AC060004D12A2 /* PokemonTypeTableViewCell.swift in Sources */,
 				7D8CE193252A9355004D12A2 /* PokemonVortigoApi.swift in Sources */,
 				7D8CE15A252A552F004D12A2 /* RegisterViewModel.swift in Sources */,
+				7D8CE1C3252AABA9004D12A2 /* PokemonResults.swift in Sources */,
 				7D8CE134252A3BC3004D12A2 /* AppDelegate.swift in Sources */,
 				7D8CE19D252A9716004D12A2 /* PokemonType.swift in Sources */,
 				7D8CE16A252A5EE0004D12A2 /* UIViewController+Extensions.swift in Sources */,
 				7D8CE187252A9281004D12A2 /* Result+decoded.swift in Sources */,
+				7D8CE1CD252AAC3A004D12A2 /* PokemonTypeChoiceViewModel.swift in Sources */,
 				7D8CE184252A9245004D12A2 /* Service.swift in Sources */,
 				7D8CE18A252A9291004D12A2 /* ApiError.swift in Sources */,
 				7D8CE136252A3BC3004D12A2 /* SceneDelegate.swift in Sources */,
